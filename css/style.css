@@ -1,0 +1,383 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.sec-title {
+    text-align: center;
+    font-size: 2.5rem;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-bottom: 6px solid red;
+    padding-bottom: 20px;
+}
+
+/* header---------------- */
+
+#header {
+    display: flex;
+    width: 100%;
+    background-color: black;
+    height: 80px;
+    line-height: 80px;
+    position: fixed;
+    z-index: 10;
+    justify-content: space-between;
+}
+
+#header .site-title {
+    padding: 0 16px;
+}
+
+#header .site-title a {
+    color: #fff;
+    display: inline-block;
+}
+
+#nav ul.nav-list {
+    display: flex;
+}
+
+#nav ul.nav-list li {
+    margin-right: 25px;
+}
+
+#nav ul.nav-list li a {
+    display: block;
+    color: #fff;
+}
+
+#bar {
+    display: none;
+}
+
+#service {
+    margin-bottom: 40px;
+    padding-top: 80px;
+}
+
+.list {
+    display: flex;
+    margin: 0 20px;
+    justify-content: space-between;
+}
+
+.list .service-list {
+    width: 32%;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.list-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+.list-fa {
+    margin-right: 10px;
+    text-align: left;
+}
+
+.list .service-list p {
+    text-align: left;
+    line-height: 1.8rem;
+}
+
+#my-info {
+    margin-bottom: 20px;
+    padding-top: 80px;
+}
+
+#my-info .info {
+    display: flex;
+    margin:0 30px
+}
+
+#my-info .info .info-img {
+    width: 30%;
+    padding: 10px;
+}
+#my-info .info .info-img img{
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+#my-info .info .info-text {
+    width: 70%;
+    padding: 10px 50px;
+    margin: 50px;
+}
+
+#my-info .info .info-text p {
+  line-height: 1.8rem
+}
+
+#contact {
+    padding-top: 80px;
+    margin-bottom: 40px;
+}
+
+#blog {
+    margin-bottom: 40px;
+    padding-top: 80px;
+}
+
+#blog .items {
+    display: flex;
+    margin: 0 30px;
+    justify-content: space-between;
+}
+
+#blog .items article {
+    width: 32%;
+    text-align: center;
+    line-height: 30px;
+}
+
+#blog .items article img {
+    height: 200px;
+    width: 280px;
+    border: 1px solid #333 ;
+}
+
+.readmore a {
+    display: inline-block;
+    background-color: gainsboro;
+    padding: 5px 10px;
+
+
+}
+
+.readmore a:hover {
+    opacity: 0.7;
+}
+
+
+
+
+#footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
+#mainvisual {
+    padding-top: 80px;
+}
+
+.gosodan {
+    text-align: center;
+    margin: 0 40px;
+}
+.gosodan p {
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 2rem;
+}
+
+.oto {
+    color: blue;
+    background-color: aliceblue;
+    font-size: 30px;
+    font-weight: bold;
+    border: #333 solid 2px;
+    padding: 10px;
+    display: inline-block;
+}
+
+.oto:hover {
+    opacity: 0.7;
+}
+
+   /*----------------------------
+* メニュー開閉ボタン
+*----------------------------*/
+.menu-btn{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    color: #fff;
+  }
+  
+
+
+  .menu-btn {
+    display: none;
+}
+  /*----------------------------
+  * メニュー本体
+  *----------------------------*/
+  .menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #555;
+  }
+  .menu__item{
+    width: 100%;
+    height: auto;
+    padding: .5em 1em;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .menu__item a {
+      color: #fff;
+  }
+  
+  /*----------------------------
+  * アニメーション部分
+  *----------------------------*/
+  
+  /* アニメーション前のメニューの状態 */
+  .menu{
+    transform: translateX(100vw);
+    transition: all .3s linear;
+  }
+  /* アニメーション後のメニューの状態 */
+  .menu.is-active{
+    transform: translateX(0);
+  }
+
+
+
+
+@media screen and ( max-width: 767px ) {
+
+    #nav {
+        display: none;
+    }
+
+    #service .list {
+        flex-direction: column;
+    }
+
+    #service {
+        margin-bottom: 0px;
+    }
+
+    #service .service-list {
+        margin-bottom: 30px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #service .service-list h3 {
+        margin-right: 50px;
+    }
+
+    #service .service-list p {
+        margin-right: 50px;
+    }
+
+    #service .service-list:last-child{
+        margin-bottom: 0;
+    }
+
+
+    #my-info {
+        margin-bottom: 0;
+    }
+
+    #my-info .info {
+        flex-direction: column;
+    }
+
+    #my-info .info .info-img {
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 0px;
+    }
+
+    #my-info .info .info-text {
+        width: 70%;
+        margin: 0 auto;
+        padding: 30px;
+        margin-bottom: 40px;
+    }
+
+    .items {
+        flex-direction: column;
+    }
+
+    article {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    #blog .items article {
+        width: 100%;
+    }
+
+    .list {
+        padding: 0 50px;
+    }
+
+    #contact {
+        padding-top: 0;
+    }
+
+    #bar{
+        display: block;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    #bar:hover {
+        opacity: 0.7;
+    }
+
+    .menu-btn {
+        display: block;
+        line-height: 80px;
+        margin-right: 30px;
+    }
+
+    .gosodan p {
+        text-align: left;
+        margin-bottom: 50px;
+    }
+
+    .gosodan {
+        margin: 30px 75px 0;
+    }
+
+    #contact {
+        margin-bottom: 20px;
+    }
+
+}
